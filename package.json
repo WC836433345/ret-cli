@@ -1,0 +1,25 @@
+{
+  "name": "shein-oa-project",
+  "version": "1.0.0",
+  "description": "shein react app 脚手架",
+  "main": "index.js",
+  "bin": {
+    "shein-oa-project": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chaotoge",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "download-git-repo": "^3.0.2",
+    "fs": "0.0.1-security",
+    "fs-extra": "^9.0.0",
+    "handlebars": "^4.7.6",
+    "inquirer": "^7.1.0",
+    "log-symbols": "^4.0.0",
+    "ora": "^4.0.4"
+  }
+}
