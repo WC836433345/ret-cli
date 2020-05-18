@@ -5,16 +5,15 @@ const download = require("download-git-repo");
 const ora = require("ora");
 const handlebars = require("handlebars");
 const symbols = require("log-symbols");
+const inquirer = require('inquirer');
 
 
 const packageJson = require('./package.json');
 
 let projectName;
 
-const program = new commander.Command(packageJson.name)
-    .version(packageJson.version)
-    .arguments('<project-directory>')
-    .usage(`${chalk.green('<project-directory>')} [options]`)
+commander.version(packageJson.version,'-v,--version')
+    .command('init <name>')
     .action(name => {
         if (fs.existsSync(name)) {
             // 错误提示项目已存在，避免覆盖原有项目
@@ -32,7 +31,7 @@ const program = new commander.Command(packageJson.name)
             }
         ]).then(answers => {
             download(
-                "https://git.datatub.com:Uranus/general-template#master",
+                "direct:https://github.com/WC836433345/ret-template.git",
                 name,
                 { clone: true },
                 err => {
@@ -55,7 +54,7 @@ const program = new commander.Command(packageJson.name)
                     } else {
                         spinner.fail();
                         console.log(symbols.error, chalk.red(`拉取远程仓库失败${err}`));
-                    }
+                    };
                 }
             );
         });

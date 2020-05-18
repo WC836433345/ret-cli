@@ -1,13 +1,17 @@
 {
-  "name": "shein-oa-project",
+  "name": "ret-cli",
   "version": "1.0.0",
-  "description": "shein react app 脚手架",
+  "description": "ret 脚手架",
   "main": "index.js",
   "bin": {
-    "shein-oa-project": "./index.js"
+    "ret": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
   },
   "author": "chaotoge",
   "license": "ISC",

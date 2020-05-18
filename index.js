@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var chalk = require('chalk');
 
 var currentNodeVersion = process.versions.node; // 返回Node版本信息，如果有多个版本返回多个版本
@@ -19,4 +21,4 @@ if (major < 4) {
 }
 
 // 没有小于4就引入以下文件继续执行
-require('./sheinoaProject.js');
+require('./main.js');
