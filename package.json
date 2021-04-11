@@ -1,6 +1,6 @@
 {
   "name": "ret-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ret 脚手架",
   "main": "index.js",
   "bin": {
