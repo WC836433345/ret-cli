@@ -39,19 +39,19 @@ commander.version(packageJson.version,'-v,--version')
             let TEMPLATE = "";
             switch(answers.template){
                 case "app":
-                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    TEMPLATE = "direct:https://github.com/WC836433345/react-pc.git";
                     break;
                 case "app-apges":
-                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    TEMPLATE = "direct:https://github.com/WC836433345/react-pc.git";
                     break;
                 case "pc":
-                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    TEMPLATE = "direct:https://github.com/WC836433345/react-pc.git";
                     break;
                 case "pc-pages":
-                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    TEMPLATE = "direct:https://github.com/WC836433345/react-pc.git";
                     break;
                 default:
-                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    TEMPLATE = "direct:https://github.com/WC836433345/react-pc.git";
                     break;
             }
             download(
