@@ -28,15 +28,37 @@ commander.version(packageJson.version,'-v,--version')
             {
                 name: "author",
                 message: "请输入作者名称"
+            },
+            {
+                name: 'template',
+                message: '请输入模板类型（pc/app）：'
             }
         ]).then(answers => {
+            const spinner = ora('正在下载模板...');
+            spinner.start();
+            let TEMPLATE = "";
+            switch(answers.template){
+                case "app":
+                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    break;
+                case "app-apges":
+                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    break;
+                case "pc":
+                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    break;
+                case "pc-pages":
+                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    break;
+                default:
+                    TEMPLATE = "https://github.com/WC836433345/react-pc.git";
+                    break;
+            }
             download(
-                "direct:https://github.com/WC836433345/ret-template.git",
+                TEMPLATE,
                 name,
                 { clone: true },
                 err => {
-                    const spinner = ora("正在下载模板...");
-                    spinner.start();
                     if (!err) {
                         spinner.succeed();
                         const meta = {
